@@ -1,16 +1,45 @@
-const path = require('path')
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const Waypoints = require('waypoints')
 
 module.exports = {
     entry: {
-        resources: './src/resources/js/index.js',
-        vendors: './src/vendors/js/jquery.waypoints.min.js'
+        main: ['@babel/polyfill', './src/resources/js/index.js']
     },
     output: {
-        path: path.resolve(__dirname, '/dist/js'),
-        filename: '[name].js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'js/[name].js'
     },
     devServer: {
         contentBase: './dist'
     },
-    target: 'node'
-}
+    target: 'node',
+    plugins: [
+        new HTMLWebpackPlugin({
+            filename:   'index.html',
+            template:   './src/index.html' 
+        }),
+        new HTMLWebpackPlugin({
+            filename:   'words.html',
+            template:   './src/words.html',
+            inject: false
+        }),
+        new Waypoints({
+            element:    MutationObserver(window.document.querySelector('#viewBoxSection_js')),
+            handler:    (direction) => {
+                console.log(direction)
+            }
+        })
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            }
+        ]
+    }
+};
