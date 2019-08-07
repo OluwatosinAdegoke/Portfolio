@@ -2,6 +2,7 @@
 import words from './models/words';
 import * as wordsView from './views/wordsView';
 import {elements} from './views/base';
+//import styles from '../css/style.css'
 
 /*--On Page Load--*/
 //On page load

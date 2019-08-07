@@ -60,13 +60,7 @@ export const toBigView = contentName => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <script type='text/javascript'>
-                        window.document.querySelector('.goods').addEventListener('click', () => {returnSmallView()
-                        console.log('hello')
-                        })
-                    </script>
-                    `;
+                    </div>`;
     
     //hide original content
     elements.wordBoxSection.style.display = 'none';

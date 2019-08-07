@@ -9,11 +9,11 @@ let content = {
         e: 'Is a film enjoyable simply because it is more representative?'
     },
     img: {
-        a: '../resources/img/words/black panther/one.jpg'
+        a: '/resources/img/words/black panther/one.jpg'
         },
     short_des: 'Marvel’s latest blockbuster, Black Panther, seems to have struck a few nerves this year. It is iconic, provocative and a timely progression from last year’s #BlackLivesMatter campaign. What stands out for me in this film is that we see a battle between nobility and black aggression.',
     para: {
-        a:`Marvel’s latest blockbuster, Black Panther, seems to have struck a few nerves this year. It is iconic, provocative and a timely progression from last year’s #BlackLivesMatter campaign. What stands out for me in this film is that we see a battle between nobility and black aggression.
+        a: `Marvel’s latest blockbuster, Black Panther, seems to have struck a few nerves this year. It is iconic, provocative and a timely progression from last year’s #BlackLivesMatter campaign. What stands out for me in this film is that we see a battle between nobility and black aggression.
 
                 The majority of the film is spent constructing two sides. Early on, the audience sees T’Challa prove his worth in a trial and combat event before a collection of noble tribes. In seeing him win, we are made to acknowledge that he is a king deserving of the crown. The opposing depiction of the antagonist, Erik Killmonger, requires more in depth screen time, flashbacks, and prolonged story-telling. Eventually it is revealed to the audience that Killmonger, who was left orphaned due to his father’s murder by the previous Black Panther, has grown up in America to witness pervasive racism taking the form of police brutality and mass incarceration. He has also learnt about the impenetrable walls of Wakanda and their technology so far advanced that it holds potential to globally liberate all black people. Furthermore, this is Erik’s precise intention – to liberate black people across the globe.
                 `,
