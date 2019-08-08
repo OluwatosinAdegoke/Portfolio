@@ -1,5 +1,9 @@
 import {elements} from './base';
 import words from '../models/words';
+import 'waypoints/lib/noframework.waypoints.min.js';
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
 
 
 // thumbnail view
@@ -23,8 +27,11 @@ export const toBigView = contentName => {
     elements.page.classList.remove('words-background');
     elements.page.classList.add('view-background');
 
+    //hide original content
+    elements.wordBoxSection.style.display = 'none';
+
     //loop through entire array of articles to find matching title then select resepctive array
-    //this way you convert the dom object to just an array
+    //this way you convert the DOM object to just an array
     for (let i = 0; i <= words.length; i++){
 
         if(words[i].title === contentName){
@@ -37,16 +44,19 @@ export const toBigView = contentName => {
     
     //create markUp 
     const markUp = `<div id='viewBoxSection_js'>
+
                         <div class='wordViewBox'>
-                            <span>
-                                ${elements.cross}
-                            </span>
+                            <nav class='mainHead' name='mainHead'>
+                                <span>
+                                    ${elements.cross}
+                                </span>
 
-                            <h3>
-                                ${content.title}
-                            </h3>
+                                <h3>
+                                    ${content.title}
+                                </h3>
+                            </nav>
 
-                            <div class='row viewBox'>
+                            <div class='row viewBox group'>
                                 <div class='col span-1-of-2'>
                                     <ul class='list_words'>
                                         ${displayContent(content, type[0])}
@@ -62,14 +72,13 @@ export const toBigView = contentName => {
                         </div>
                     </div>`;
     
-    //hide original content
-    elements.wordBoxSection.style.display = 'none';
+    //insert new content
     window.document.querySelector('body').insertAdjacentHTML('beforeend', markUp);
 
     //after a moment add new event listener to exit-x
     setTimeout(() => {
-        window.document.querySelector('.wordViewBox span svg').addEventListener('click', returnSmallView);
-        stickyNavigationReady();
+        window.document.querySelector('[name="mainHead"] svg').addEventListener('click', returnSmallView);
+        stickyNavigationReady(content);
     }, 1500)
 };
 
@@ -109,23 +118,37 @@ const returnSmallView = () => {
     elements.page.classList.add('words-background');
 
     //hide new content and show original content
-    let toBeRemoved = window.document.querySelector('#viewBoxSection_js')
+    let toBeRemoved = window.document.querySelector('#viewBoxSection_js');
     toBeRemoved.parentNode.removeChild(toBeRemoved);
     elements.wordBoxSection.style.display = 'initial';
 }
 
 //sticky navigation
-const stickyNavigationReady = () => {
+const stickyNavigationReady = (content) => {
 
-    $('document').ready(function(){
-        $('#viewBoxSection_js').waypoint(function(direction){
-            if(direction == 'down'){
-                
-                $('.drop_title').style.display('initial')
-            }else
-                $('.drop_title').style.display('none')
-            }, {
-            offset: '60px'
+  $('document').ready(function(){
+      const waypoint =  new Waypoint({
+            element: window.document.querySelector('.viewBox'),
+            handler: (direction) => {
+
+                const bigTitle = window.document.querySelector('[name="mainHead"]');
+                const bigTitleClassList = bigTitle.classList
+
+                if(direction === 'down'){
+
+                    bigTitleClassList.remove('mainHead');
+                    bigTitleClassList.add('row');
+                    bigTitleClassList.add('drop_title');
+                    console.log(direction)
+
+                }else if(direction === 'up'){
+                    bigTitleClassList.remove('drop_title');
+                    bigTitleClassList.remove('row');
+                    bigTitleClassList.add('mainHead');
+                    console.log(direction)
+                }
+            },
+            offset: '50px'
         })
     })
 }

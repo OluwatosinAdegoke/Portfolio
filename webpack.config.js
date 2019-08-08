@@ -23,12 +23,6 @@ module.exports = {
             filename:   'words.html',
             template:   './src/words.html',
             inject: false
-        }),
-        new Waypoints({
-            element:    MutationObserver(window.document.querySelector('#viewBoxSection_js')),
-            handler:    (direction) => {
-                console.log(direction)
-            }
         })
     ],
     module: {

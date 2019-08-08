@@ -251,16 +251,16 @@ a{
 
 /*-exit buttons-*/
 
-.wordViewBox svg, .drop_title svg{
+.mainHead svg, .drop_title svg{
     height: 50px; 
     float: right;
 }
 
-.wordViewBox span{ margin-top:30px}
+.mainHead span{ margin-top:30px}
 
-.wordViewBox svg{transition: height 0.5s}
+.mainHead svg{ transition: height 0.5s}
 
-.wordViewBox svg:hover{
+.mainHead svg:hover{
     height:75px;
     cursor: pointer
 }
@@ -282,16 +282,16 @@ a{
     font-weight: 300;
 }
 
-h3 {
+/*h3 {
     font-size: 200%;
     font-weight: 400;
     text-align: center;
     display: block;
     margin: 0 auto;
     width: 50%;
-}
+}*/
 
-h3:after{
+/*h3:after{
     content:'';
     display: block;
     margin: 0 auto;
@@ -299,7 +299,7 @@ h3:after{
     padding-top: 15px;
     border-bottom: 4px solid #ffb142;
     margin-bottom: 10px
-}
+}*/
 
 /*--the images--*/
 
@@ -315,22 +315,46 @@ h3:after{
     border: 1px solid black
 }
 
+/*---big-title---*/
+.mainHead h3{
+    font-size: 200%;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.mainHead h3:after{
+    content:'';
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    padding-top: 15px;
+    border-bottom: 4px solid #ffb142;
+    margin-bottom: 10px
+}
+
 /*---drop title---*/
 .drop_title{
     width: 100%;
     height: 75px;
-    padding-top: 15px;
+    padding: 15px 0 0 0;
     background-color: #ffb142;
     border-bottom: 4px solid #000;
     position: fixed;
     transition: border 0.25s;
-    cursor: pointer
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }
 
 .drop_title:hover{ border-bottom: 4px solid #fff}
 
-h4{
-    display: inline;
+.drop_title h3{
     padding-bottom: 5px;
-    font-size: 150%
+    font-size: 150%;
 }
