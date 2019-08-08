@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "presets":[
         [
@@ -12,4 +13,20 @@
             }
         ]
     ]
+=======
+{
+    "presets":[
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "browsers": [
+                        "last 5 versions",
+                        "> 0.25%"
+                    ]
+                }
+            }
+        ]
+    ]
+>>>>>>> 69c95e360bac1b35ae23e5b912f982ccab6bb7c7
 }
