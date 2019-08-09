@@ -1,4 +1,5 @@
 import {elements} from './base';
+import '../../../../dist/resources/style.css'
 import words from '../models/words';
 import 'waypoints/lib/noframework.waypoints.min.js';
 import $ from 'jquery';

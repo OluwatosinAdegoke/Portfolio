@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const miniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
@@ -24,6 +24,9 @@ module.exports = {
             filename:   'words.html',
             template:   './src/words.html',
             inject: false
+        }),
+        new miniCSSExtractPlugin({
+            filename: isProd ?  "[name]-[contenthash].css" : "[name].css"
         })
     ],
     module: {
@@ -34,53 +37,13 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
-            }
-        ]
-    }
-=======
-const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const Waypoints = require('waypoints')
-
-module.exports = {
-    entry: {
-        main: ['@babel/polyfill', './src/resources/js/index.js']
-    },
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].js'
-    },
-    devServer: {
-        contentBase: './dist'
-    },
-    target: 'node',
-    plugins: [
-        new HTMLWebpackPlugin({
-            filename:   'index.html',
-            template:   './src/index.html' 
-        }),
-        new HTMLWebpackPlugin({
-            filename:   'words.html',
-            template:   './src/words.html',
-            inject: false
-        }),
-        new Waypoints({
-            element:    MutationObserver(window.document.querySelector('#viewBoxSection_js')),
-            handler:    (direction) => {
-                console.log(direction)
-            }
-        })
-    ],
-    module: {
-        rules: [
+            },
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
+                test: /\.css$/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: 'css-loader'
                 }
             }
         ]
     }
->>>>>>> 69c95e360bac1b35ae23e5b912f982ccab6bb7c7
 };
