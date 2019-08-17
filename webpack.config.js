@@ -26,7 +26,7 @@ module.exports = {
             inject: false
         }),
         new miniCSSExtractPlugin({
-            filename: isProd ?  "[name]-[contenthash].css" : "[name].css"
+            filename: "[name].css"
         })
     ],
     module: {
@@ -40,9 +40,18 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: {
-                    loader: 'css-loader'
-                }
+                use: [ miniCSSExtractPlugin.loader,'css-loader']
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192,
+                        }
+                    }
+                ]
             }
         ]
     }
