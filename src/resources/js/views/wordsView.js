@@ -72,7 +72,7 @@ export const toBigView = contentName => {
                     </div>`;
     
     //insert new content
-    window.document.querySelector('body').insertAdjacentHTML('beforeend', markUp);
+    window.document.querySelector('script').insertAdjacentHTML('beforebegin', markUp);
 
     //after a moment add new event listener to exit-x
     setTimeout(() => {
