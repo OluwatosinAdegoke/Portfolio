@@ -1,5 +1,4 @@
 import {elements} from './base';
-import '../../css/style.css'
 import words from '../models/words';
 import 'waypoints/lib/noframework.waypoints.min.js';
 import $ from 'jquery';
@@ -45,7 +44,6 @@ export const toBigView = contentName => {
     
     //create markUp 
     const markUp = `<div id='viewBoxSection_js'>
-
                         <div class='wordViewBox'>
                             <nav class='mainHead' name='mainHead'>
                                 <span>

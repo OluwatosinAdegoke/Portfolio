@@ -5,7 +5,7 @@ const miniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: {
-        main: ['@babel/polyfill', './src/resources/js/index.js']
+        main: ['@babel/polyfill/noConflict', './src/resources/js/index.js']
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -41,6 +41,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [ miniCSSExtractPlugin.loader,'css-loader']
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader'
             },
             {
                 test: /\.(png|jpg|gif)$/,
