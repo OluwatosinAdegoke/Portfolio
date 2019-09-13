@@ -1,3 +1,4 @@
+/*--------------------------------------VIEW 4 WORDS-PAGE--------------------------------------*/
 import {elements} from './base';
 import words from '../models/words';
 import 'waypoints/lib/noframework.waypoints.min.js';

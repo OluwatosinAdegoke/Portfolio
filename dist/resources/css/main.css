@@ -74,11 +74,11 @@ section{ margin-top: 0px}
 /*---------------*/
 
 .landing {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),url(/src/resources/css/img/juicing_b&w.png);
+    background-image:  url('img/juicing_b&w.png');
     background-size: cover;
     height: 100vh;
     background-position: center;
-    width: 100%
+    width: 100%;
 }
 
 h1{ 
@@ -87,6 +87,8 @@ h1{
     letter-spacing: 0px;
 }
 
+.straightjuicing{cursor: pointer;}
+
 .straightjuicing h1{ 
     width: 40%;
     padding:22px;
@@ -94,34 +96,44 @@ h1{
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     position: fixed;
-    cursor: context-menu;
-    margin-top: 350px;
+    bottom: 20%;
     color: #ffb142;
 }
 
 .straightjuicing h1 span{
-    cursor: pointer;
     color: #fff;
     -webkit-text-stroke: 1.5px #000;
 }
 
 .definition{
     width: 100%;
-    border-top: 2px #343333;
-    border-bottom: 2px #343333;
-    background: #3e3d3d;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    background: rgba(96,95,95, 0.9);
     height: auto;
     padding: 5% 2.5%;
     margin-top:50px;
-    cursor: pointer;
-    display: none
 }
 
-.definition p{ width: 70% }
+.definition p{ 
+    width: 70%;
+    font-size: 120%;
+    color: white;
 
-.definition a{ 
+ }
+
+.definition svg{
+    width: 10%; 
+    fill:white;
     float: right;
-    font-size: 250%;
+    cursor: pointer;
+    transition: fill 1s
+}
+
+.definition svg:hover{fill: #ffb142;}
+
+.definition span{
+    color: #ffb142;
 }
 
 /*------main navigation-----*/
@@ -156,9 +168,13 @@ h1, h2 {
 h1 { font-size: 280% }
 
 h2 { 
-    font-size: 150%;
+    font-size: 200%;
     font-family: 'Titillium Web', 'Arial', 'sans-serif';
-    font-weight: 200
+    color: #ffb142;
+}
+
+h2 span{
+    font-size: 60%
 }
 
 /*------links------*/

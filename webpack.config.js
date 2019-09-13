@@ -1,6 +1,5 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const miniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
@@ -9,7 +8,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].js'
+        filename: 'js/main.js'
     },
     devServer: {
         contentBase: './dist'
@@ -24,9 +23,6 @@ module.exports = {
             filename:   'words.html',
             template:   './src/words.html',
             inject: false
-        }),
-        new miniCSSExtractPlugin({
-            filename: "[name].css"
         })
     ],
     module: {
@@ -37,25 +33,6 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
-            },
-            {
-                test: /\.css$/,
-                use: [ miniCSSExtractPlugin.loader,'css-loader']
-            },
-            {
-                test: /\.css$/,
-                loader: 'style-loader'
-            },
-            {
-                test: /\.(png|jpg|gif)$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 8192,
-                        }
-                    }
-                ]
             }
         ]
     }

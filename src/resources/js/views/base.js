@@ -1,6 +1,12 @@
-//an object of all the important query selectors
-
+/*--------------------------------------KEY ELEMENTS--------------------------------------*/
 export const elements = {
+    words: 'words',
+    video: 'videos',
+    home: window.document.querySelector('.home'),
+    definition: window.document.querySelector('.definition'),
+    definitionCross: window.document.querySelector('.definition a'),
+    juicing: window.document.querySelector('.straightjuicing'),
+    landing: window.document.querySelector('.landing'),
     wordsBox: window.document.getElementById(`wordBox_js`),
     stripped_wordsBox: 'wordBox_js',
     buttons: document.querySelectorAll('.inactive'),

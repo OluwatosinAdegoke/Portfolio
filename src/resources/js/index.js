@@ -1,13 +1,45 @@
-// Global Controller
+/*--------------------------------------GLOBAL CONTROLLER--------------------------------------*/
 import words from './models/words';
 import * as wordsView from './views/wordsView';
 import {elements} from './views/base';
 
+//new URL variable
+const URL = window.location.href
 
-/*--On Page Load--*/
-//On page load
-window.addEventListener('load', () => {
+/*--Page URL Assigns--*/
+// words & videos
+Array.from(elements.buttons).forEach(page=> {
+    page.addEventListener('click', function(){
+        //grab page name
+        const name = this.innerHTML
+        
+        //using URL varibale from above
+        window.location.assign(`${URL}/${name}.html`, true)
+    })
+})
 
+//home
+
+
+/*--Page Loads--*/
+
+//home --> loading
+const homeLoad = () => {
+    //loading icon gets added
+    elements.addLoader(elements.loader, 50);
+
+    //loading items gets revealed
+    setTimeout(() => {
+        //remove loader
+        elements.removeLoader(elements.loader);
+
+        elements.landing.style.display='block';
+
+    }, elements.timing())
+}
+
+//words --> loading
+const wordsLoad = () => {
     //loading icon gets added
     elements.addLoader(elements.loader, 25)
 
@@ -38,21 +70,36 @@ window.addEventListener('load', () => {
         } else{
             elements.removeLoader(toBeRemoved)
             elements.wordsError(elements.loader)
-        }}
-        , elements.timing())
+        }
+    }, elements.timing())
+}
+
+//On page load
+window.addEventListener('load', () => {
+    if(/words/.test(URL)){
+        wordsLoad();
+    }else if(/videos/.test(URL)){
+        console.log('loading video');
+    }else {
+        homeLoad();
+    }
 })
 
-// Pages ---> words & videos
-Array.from(elements.buttons).forEach(page=> {
-    page.addEventListener('click', function(){
-        //grab page name
-        const name = this.innerHTML
-        
-        //assign new URL value
-        const URL = window.location.href
-        window.location.assign(`${URL}${name}.html`, true)
-    })
+/*--Functions for Homepage--*/
+elements.juicing.addEventListener('click', () => {
+    //insert cross
+    elements.definitionCross.innerHTML = `${elements.cross}`;
+
+    //show definition
+    elements.definition.style.display = 'block';
 })
+
+elements.definitionCross.addEventListener('click', () => {
+    //remove definition
+    elements.definition.style.display = 'none'
+})
+
+
 
 
 
