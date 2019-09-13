@@ -23,7 +23,6 @@ export const toView = content => {
 
 //main view
 export const toBigView = contentName => {
-
     // change background colour
     elements.page.classList.remove('words-background');
     elements.page.classList.add('view-background');
@@ -112,7 +111,6 @@ const displayContent = (content, type) => {
 
 //returns the Big view to the small view
 const returnSmallView = () => {
-
     //change background color back to original
     elements.page.classList.remove('view-background');
     elements.page.classList.add('words-background');
@@ -125,7 +123,6 @@ const returnSmallView = () => {
 
 //sticky navigation
 const stickyNavigationReady = (content) => {
-
   $('document').ready(function(){
       const waypoint =  new Waypoint({
             element: window.document.querySelector('.viewBox'),

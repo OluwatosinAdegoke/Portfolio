@@ -4,7 +4,7 @@ import * as wordsView from './views/wordsView';
 import {elements} from './views/base';
 
 //new URL variable
-const URL = window.location.href
+const URL = window.location.href;
 
 /*--Page URL Assigns--*/
 // words & videos
@@ -14,26 +14,47 @@ Array.from(elements.buttons).forEach(page=> {
         const name = this.innerHTML
         
         //using URL varibale from above
-        window.location.assign(`${URL}/${name}.html`, true)
+        window.location.assign(`${URL}${name}.html`, true)
     })
 })
 
-//home
+//Go Home
+const goHome = () => {
+    elements.home.addEventListener('click', () => {
+        var newURL = URL.replace(/(words.html)|(videos.html)/, '');
+        window.location.assign(newURL, true);
+    })
+}
 
+/*--Functions for Homepage--*/
+const homeDefine = () => {
+    elements.juicing.addEventListener('click', () => {
+        //insert cross
+        elements.definitionCross.innerHTML = `${elements.cross}`;
+    
+        //show definition
+        elements.definition.style.display = 'block';
+    })
+    
+    elements.definitionCross.addEventListener('click', () => {
+        //remove definition
+        elements.definition.style.display = 'none'
+    })
+}
 
 /*--Page Loads--*/
 
 //home --> loading
 const homeLoad = () => {
     //loading icon gets added
-    elements.addLoader(elements.loader, 50);
+    elements.addLoader(elements.loader, 40);
 
     //loading items gets revealed
     setTimeout(() => {
         //remove loader
         elements.removeLoader(elements.loader);
 
-        elements.landing.style.display='block';
+        elements.landing.style.display = 'block';
 
     }, elements.timing())
 }
@@ -78,26 +99,15 @@ const wordsLoad = () => {
 window.addEventListener('load', () => {
     if(/words/.test(URL)){
         wordsLoad();
+        goHome();
     }else if(/videos/.test(URL)){
         console.log('loading video');
     }else {
         homeLoad();
+        homeDefine();
     }
 })
 
-/*--Functions for Homepage--*/
-elements.juicing.addEventListener('click', () => {
-    //insert cross
-    elements.definitionCross.innerHTML = `${elements.cross}`;
-
-    //show definition
-    elements.definition.style.display = 'block';
-})
-
-elements.definitionCross.addEventListener('click', () => {
-    //remove definition
-    elements.definition.style.display = 'none'
-})
 
 
 
