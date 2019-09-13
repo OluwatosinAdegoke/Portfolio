@@ -47,12 +47,12 @@ const homeDefine = () => {
 //home --> loading
 const homeLoad = () => {
     //loading icon gets added
-    elements.addLoader(elements.loader, 40);
+    elements.addLoader(elements.home_loader, 40);
 
     //loading items gets revealed
     setTimeout(() => {
         //remove loader
-        elements.removeLoader(elements.loader);
+        elements.removeLoader(elements.home_loader);
 
         elements.landing.style.display = 'block';
 

@@ -11,6 +11,7 @@ export const elements = {
     stripped_wordsBox: 'wordBox_js',
     buttons: document.querySelectorAll('.inactive'),
     page: window.document.querySelector('html'),
+    home_loader: window.document.querySelector('.home-loader'),
     loader: window.document.querySelector('.loader'),
     wordBoxSection: window.document.querySelector('#wordBoxSection_js'),
     cross: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
