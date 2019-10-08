@@ -1,5 +1,13 @@
 /*--------------------------------------KEY ELEMENTS--------------------------------------*/
 export const elements = {
+    main_vid: window.document.querySelector('figure div'),
+    main_title: window.document.querySelector('figure h3'),
+    main_des: window.document.querySelector('figure p:nth-of-type(1)'),
+    main_comm: window.document.querySelector('figure p:nth-of-type(2)'),
+    slide_prev: window.document.querySelector('#sub_videos_container_js div:first-child'),
+    slide_next: window.document.querySelector('#sub_videos_container_js div:last-child'),
+    go_prev: window.document.querySelector('#direction_js p:nth-of-type(1)'),
+    go_next: window.document.querySelector('#direction_js p:nth-of-type(2)'),
     words: 'words',
     video: 'videos',
     home: window.document.querySelector('.home'),

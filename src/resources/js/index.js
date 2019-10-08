@@ -1,6 +1,7 @@
 /*--------------------------------------GLOBAL CONTROLLER--------------------------------------*/
 import words from './models/words';
 import * as wordsView from './views/wordsView';
+import * as videosView from './views/videosView';
 import {elements} from './views/base';
 
 //new URL variable
@@ -95,13 +96,34 @@ const wordsLoad = () => {
     }, elements.timing())
 }
 
+//Videos --> loading
+const videosLoad = () => {
+    //loading icon gets added
+
+    //add iframe
+    videosView.loadMainVid()
+
+    //add sub Vids
+    videosView.loadSubVid();
+
+    //initiatie prev and next buttons
+    elements.go_next.addEventListener('click', () => {
+        videosView.changeVid('next')
+    });
+    elements.go_prev.addEventListener('click', () => {
+        videosView.changeVid('prev')
+    });
+    
+}
+
 //On page load
 window.addEventListener('load', () => {
     if(/words/.test(URL)){
         wordsLoad();
         goHome();
     }else if(/videos/.test(URL)){
-        console.log('loading video');
+        videosLoad();
+        goHome();
     }else {
         homeLoad();
         homeDefine();

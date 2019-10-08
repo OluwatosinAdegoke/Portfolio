@@ -23,6 +23,11 @@ module.exports = {
             filename:   'words.html',
             template:   './src/words.html',
             inject: false
+        }),
+        new HTMLWebpackPlugin({
+            filename:   'videos.html',
+            template:   './src/videos.html',
+            inject: false
         })
     ],
     module: {

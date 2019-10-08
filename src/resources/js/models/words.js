@@ -1,7 +1,7 @@
 /*--------------------------------------DATA 4 WORDS-PAGE--------------------------------------*/
-import one from '../content/words/black_panther'
-import two from '../content/words/green_book'
+import a from '../content/words/black_panther'
+import b from '../content/words/green_book'
 
 let words = [];
-words.push(one, two);
+words.push(a, b);
 export default words
