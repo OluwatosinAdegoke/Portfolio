@@ -113,6 +113,14 @@ const videosLoad = () => {
     elements.go_prev.addEventListener('click', () => {
         videosView.changeVid('prev')
     });
+
+    elements.slide_next.addEventListener('click', () => {
+        videosView.videoSlide('next')
+    });
+
+    elements.slide_prev.addEvenetListener('click', () => {
+        videosView.videoSlide('prev')
+    })
     
 }
 
