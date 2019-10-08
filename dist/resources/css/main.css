@@ -33,6 +33,13 @@ html {
 
 /*-----buttons------*/
 
+.disable-select {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+  }
+
 .inactive{
     background-color: #0a0a0a;
     transition: background-color 0.25s, color 0.5s
@@ -218,19 +225,19 @@ a{
     height: 400px;
     width: 300px;
     overflow: hidden;
+    -o-text-overflow: ellipsis;    /* Opera < 11*/
+    text-overflow: ellipsis;
     margin: 20px;
     cursor: pointer;
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
     padding: 20px;
-    transition: box-shadow 0.5s
+    transition: background-color 0.3s ease-in;
+    border: 1px solid #ffb142;
+    background-color: transparent
 }
-
 
 .thumbnail img{
     height: auto;
     width: 100%;
-    border-radius: 5px
 }
 
 .title{
@@ -252,8 +259,7 @@ a{
 .thumbnail, .title, .short-description{ margin-bottom: 10px }
 
 .box:hover, .box:active{ 
-    border-right: 1px solid #e5e3e0;
-    border-left: 1px solid #e5e3e0
+    background-color: rgba(255,177,66, 0.3)
 }
 
 /*---display view box---*/
@@ -359,3 +365,152 @@ a{
     padding-bottom: 5px;
     font-size: 150%;
 }
+
+/*---------------*/
+/* VIDEOS         */
+/*---------------*/
+
+.video-background{ background-color: #fef4f8}
+
+figure div{
+    padding-bottom: 50%;
+    position: relative;
+    width: 100%;
+    height: 0
+}
+
+figure div iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid pink;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in
+}
+
+figure div iframe:hover{ background-color: pink;}
+
+figure p{
+    padding: 1% 2.5% 2.5% 2.5%;
+    line-height: 25px;
+    font-size: 80%
+}
+
+figure h3{
+    font-size: 150%;
+    padding: 2% 0% 0% 2.5%
+}
+
+figure {
+    margin: 0 0 2% 0;
+    padding: 0;
+    border-bottom: 2px solid  #ffb142;
+}
+
+.sub_videos{
+    margin: 20px 0px 20px 0;
+    align-items: center
+}
+
+.sub_videos_container{
+    display: flex;
+    flex-direction: row
+}
+
+.sub_videos_container div[data-state='select']{
+    width: 10rem;
+    margin-left: 20px;
+    height: 10rem;
+    border: 1px solid #ffb142;
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;    /* Opera < 11*/
+    text-overflow:  ellipsis;
+}
+
+.sub_videos_container div:first-child{ margin-left: 0px}
+
+.sub_videos_container div[data-state='select']{ 
+    background-color: rgba(255,177,66, 0.1);
+    transition: background-color 0.3s ease-in;
+    padding: 70px;
+}
+
+.sub_videos_container div[data-state='select']:hover{background-color: rgba(255,177,66, 0.3);}
+
+
+.sub_videos_container div:first-child, .sub_videos_container div:last-child{
+    margin: 0 auto;
+    position: relative;
+    border: none;
+}
+
+.sub_videos_container div svg{
+    fill: pink;
+    width: 90px;
+    position: absolute;
+    right: 28%;
+    bottom: 28%;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background-color: transparent
+}
+
+.sub_videos_container div svg:hover{
+    border-radius: 50px;
+    fill: #ffb142;
+}
+
+.sub_videos_container div h5{
+    font-size: 150%;
+    color: pink
+}
+
+
+.direction p{
+    padding: 5px;
+    font-size: 100%;
+    cursor: pointer;
+    position: absolute;
+    font-weight: 400;
+    border-top: 2px solid pink;
+    transition: background-color 0.3s ease-in;
+    background-color: transparent
+}
+
+.direction p:hover{ background-color: pink;}
+
+.direction p:last-child{ right:4.2%;}
+.direction p:first-child{ left:4.2%}
+
+
+
+/*.sub_videos div iframe{
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid #f697bd;
+}*/
+
+/*.controls>*{
+    float: left;
+    width: 3.90625%;
+    height: 100%;
+    margin-left: 0.1953125%;;
+    display: block;
+}
+
+.controls button{
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    background-size: contain;
+    background-repeat: no-repeat
+}*/
