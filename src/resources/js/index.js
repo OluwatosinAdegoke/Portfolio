@@ -19,6 +19,23 @@ Array.from(elements.buttons).forEach(page=> {
     })
 })
 
+//Go to words when on videos and go to videos on words
+const goVorW = () => {
+    //Go to words when on videos and go to videos on words
+    elements.ghost_buttons.addEventListener('click', function(){
+        var newURL = changeURL();
+        const name = this.innerHTML;
+        window.location.assign(`${newURL}${name}.html`, true);
+    })
+}
+
+//change url if its words or videos
+const changeURL = () =>{
+    var newURL = URL.replace(/(words.html)|(videos.html)/, '');
+    return newURL
+}
+
+
 //Go Home
 const goHome = () => {
     elements.home.addEventListener('click', () => {
@@ -71,6 +88,9 @@ const wordsLoad = () => {
         
         if(words!==null){
 
+            //Load Navigation button
+            goVorW();
+
             //loading icon gets removed
             elements.removeLoader(toBeRemoved)
             
@@ -99,29 +119,30 @@ const wordsLoad = () => {
 //Videos --> loading
 const videosLoad = () => {
     //loading icon gets added
+    elements.addLoader(elements.loader, 25);
 
-    //add iframe
-    videosView.loadMainVid()
+    setTimeout(() => {
+        //Load Navigation button
+        goVorW();
 
-    //add sub Vids
-    videosView.loadSubVid();
+        //remove loader
+        elements.removeLoader(elements.loader);
+        
+        //add iframe
+        videosView.loadMainVid()
 
-    //initiatie prev and next buttons
-    elements.go_next.addEventListener('click', () => {
-        videosView.changeVid('next')
-    });
-    elements.go_prev.addEventListener('click', () => {
-        videosView.changeVid('prev')
-    });
+        //add sub Vids
+        videosView.loadSubVid();
 
-    elements.slide_next.addEventListener('click', () => {
-        videosView.videoSlide('next')
-    });
+        //initiatie prev and next buttons
+        elements.go_next.addEventListener('click', () => {
+            videosView.changeVid('next')
+        });
+        elements.go_prev.addEventListener('click', () => {
+            videosView.changeVid('prev')
+        });
 
-    elements.slide_prev.addEvenetListener('click', () => {
-        videosView.videoSlide('prev')
-    })
-    
+    }, elements.timing())
 }
 
 //On page load

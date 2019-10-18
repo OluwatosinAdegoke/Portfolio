@@ -41,6 +41,7 @@ export const toBigView = contentName => {
     }
 
     const type = ['para', 'img']
+    console.log(content.img.a)
     
     //create markUp 
     const markUp = `<div id='viewBoxSection_js'>
@@ -55,8 +56,13 @@ export const toBigView = contentName => {
                                 </h3>
                             </nav>
 
+                            <p class='smaller-screen-img row'>
+                            <img src= '${content.img.a}'>
+                            <img src='${content.img.b}'>
+                            </p>
+
                             <div class='row viewBox group'>
-                                <div class='col span-1-of-2'>
+                                <div class='col span-1-of-2 smaller-view'>
                                     <ul class='list_words'>
                                         ${displayContent(content, type[0])}
                                     </ul>
@@ -136,13 +142,11 @@ const stickyNavigationReady = (content) => {
                     bigTitleClassList.remove('mainHead');
                     bigTitleClassList.add('row');
                     bigTitleClassList.add('drop_title');
-                    console.log(direction)
 
                 }else if(direction === 'up'){
                     bigTitleClassList.remove('drop_title');
                     bigTitleClassList.remove('row');
                     bigTitleClassList.add('mainHead');
-                    console.log(direction)
                 }
             },
             offset: '50px'
