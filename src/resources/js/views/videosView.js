@@ -8,7 +8,7 @@ let main_vid_content = ''
 
 //load iframe
 const iframe = (data_p) => {
-    const markUp = `<iframe src="${videos[data_p].iframe}" allow="autoplay; fullscreen" allowfullscreen data-p='${data_p}' id='main_vid_js'></iframe>`
+    const markUp = `<iframe class='animated fadeIn' src="${videos[data_p].iframe}" allow="autoplay; fullscreen" allowfullscreen data-p='${data_p}' id='main_vid_js'></iframe>`
     
     //main video load
     elements.main_vid.innerHTML = markUp;

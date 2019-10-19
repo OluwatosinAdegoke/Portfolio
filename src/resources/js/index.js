@@ -3,6 +3,9 @@ import words from './models/words';
 import * as wordsView from './views/wordsView';
 import * as videosView from './views/videosView';
 import {elements} from './views/base';
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
 
 //new URL variable
 const URL = window.location.href;
@@ -51,6 +54,7 @@ const homeDefine = () => {
         elements.definitionCross.innerHTML = `${elements.cross}`;
     
         //show definition
+        $('.definition').addClass('animated bounceInDown');
         elements.definition.style.display = 'block';
     })
     

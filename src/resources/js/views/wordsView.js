@@ -9,7 +9,7 @@ window.$ = $;
 
 // thumbnail view
 export const toView = content => {
-    const markUp = `<div class='col span-1-of-4 box' id='individualWordBox_js' name='${content.title}'>
+    const markUp = `<div class='col span-1-of-4 box animated fadeIn' id='individualWordBox_js' name='${content.title}'>
                         <ul>
                             <li class='title'>${content.title}</li>
                             <li class='thumbnail'>
@@ -44,7 +44,7 @@ export const toBigView = contentName => {
     console.log(content.img.a)
     
     //create markUp 
-    const markUp = `<div id='viewBoxSection_js'>
+    const markUp = `<div id='viewBoxSection_js' class='animated fadeIn'>
                         <div class='wordViewBox'>
                             <nav class='mainHead' name='mainHead'>
                                 <span>
@@ -134,19 +134,17 @@ const stickyNavigationReady = (content) => {
             element: window.document.querySelector('.viewBox'),
             handler: (direction) => {
 
-                const bigTitle = window.document.querySelector('[name="mainHead"]');
-                const bigTitleClassList = bigTitle.classList
-
+                const bigTitle = $('[name="mainHead"]');
+ 
                 if(direction === 'down'){
 
-                    bigTitleClassList.remove('mainHead');
-                    bigTitleClassList.add('row');
-                    bigTitleClassList.add('drop_title');
+                    bigTitle.removeClass('mainHead');
+                    bigTitle.addClass('row drop_title animated fadeInDown');
+
 
                 }else if(direction === 'up'){
-                    bigTitleClassList.remove('drop_title');
-                    bigTitleClassList.remove('row');
-                    bigTitleClassList.add('mainHead');
+                    bigTitle.addClass('mainHead');
+                    bigTitle.removeClass('row drop_title animated fadeInDown');
                 }
             },
             offset: '50px'

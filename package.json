@@ -11,6 +11,7 @@
   "author": "Oluwatosin Adegoke",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^3.7.2",
     "jquery": "^3.4.1",
     "waypoints": "^4.0.1"
   },

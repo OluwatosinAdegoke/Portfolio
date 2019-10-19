@@ -9,7 +9,9 @@ let content = {
         e: 'Is a film enjoyable simply because it is more representative?'
     },
     img: {
-        a: '/resources/img/words/black panther/one.jpg'
+        a: '/resources/img/words/black panther/one.jpg',
+        b: '/resources/img/words/black panther/two.jpeg',
+        c: '/resources/img/words/black panther/three.jpg'
         },
     short_des: 'Marvel’s latest blockbuster, Black Panther, seems to have struck a few nerves this year. It is iconic, provocative and a timely progression from last year’s #BlackLivesMatter campaign. What stands out for me in this film is that we see a battle between nobility and black aggression.',
     para: {
