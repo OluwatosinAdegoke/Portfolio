@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 
 module.exports = {
@@ -7,11 +8,11 @@ module.exports = {
         main: ['@babel/polyfill/noConflict', './src/resources/js/index.js']
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'js/main.js'
+        path: path.resolve(__dirname, 'build'),
+        filename: 'bundle.js'
     },
     devServer: {
-        contentBase: './dist'
+        contentBase: './build'
     },
     target: 'node',
     plugins: [
@@ -28,7 +29,8 @@ module.exports = {
             filename:   'videos.html',
             template:   './src/videos.html',
             inject: false
-        })
+        }),
+        new UglifyJsPlugin()
     ],
     module: {
         rules: [
