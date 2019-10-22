@@ -94,7 +94,7 @@ section{ margin-top: 0px}
 
 .landing {
     background-image:  url('img/juicing_b&w-min.png');
-    background-size: no-repeat;
+    background-size: cover;
     height: 100vh;
     background-position: center;
     width: 100%;
