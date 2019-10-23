@@ -3,10 +3,12 @@
 /*---------------*/
 @import '../../vendors/css/animate.css';
 @import '../../vendors/css/Grid.css';
+@import '../../../node_modules/normalize.css/normalize.css';
 
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
 
@@ -45,6 +47,7 @@ html {
 
 .inactive{
     background-color: #0a0a0a;
+    -webkit-transition: background-color 0.2s ease-in, color 0.5s ease-in;
     transition: background-color 0.2s ease-in, color 0.5s ease-in
 }
 
@@ -59,6 +62,7 @@ html {
     border-left: 1px solid #ffb142; 
     border-bottom: 1px solid #ffb142; 
     color: black;
+    -webkit-transition: background-color 0.2s ease-in, color 0.5s ease-in;
     transition: background-color 0.2s ease-in, color 0.5s ease-in
 }
 
@@ -139,7 +143,6 @@ h1{
     width: 70%;
     font-size: 120%;
     color: white;
-
  }
 
 .definition svg{
@@ -147,6 +150,7 @@ h1{
     fill:white;
     float: right;
     cursor: pointer;
+    -webkit-transition: fill 0.2s ease-in;
     transition: fill 0.2s ease-in
 }
 
@@ -230,12 +234,12 @@ a{
 .box{
     height: 400px;
     width: 300px;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;    /* Opera < 11*/
+    overflow: hidden;    /* Opera < 11*/
     text-overflow: ellipsis;
     margin: 20px;
     cursor: pointer;
     padding: 20px;
+    -webkit-transition: background-color 0.2s ease-in;
     transition: background-color 0.2s ease-in;
     border: 1px solid #ffb142;
     background-color: transparent
@@ -294,7 +298,7 @@ a{
 
 .mainHead span{ margin-top:30px}
 
-.mainHead svg{ transition: height 0.2s ease-in}
+.mainHead svg{ -webkit-transition: height 0.2s ease-in; transition: height 0.2s ease-in}
 
 .mainHead svg:hover{
     height:75px;
@@ -363,6 +367,7 @@ a{
     background-color: #ffb142;
     border-bottom: 4px solid #000;
     position: fixed;
+    -webkit-transition: border 0.2s ease-in;
     transition: border 0.2s ease-in;
     cursor: pointer;
     display: inline-block;
@@ -400,6 +405,7 @@ figure div iframe{
     height: 100%;
     border: 2px solid pink;
     background-color: transparent;
+    -webkit-transition: background-color 0.2s ease-in;
     transition: background-color 0.2s ease-in
 }
 
@@ -417,15 +423,20 @@ figure h3{
 }
 
 figure {
-    margin: 0 0 2% 0;
     padding: 0;
     border-bottom: 2px solid  #ffb142;
 }
 
+figure, .sub_videos_container{
+    margin-left: 5%;
+    margin-right: 5%
+}
 
 .sub_videos{
-    margin: 20px 0px 20px 0;
-    align-items: center
+    margin: 20px 0px 30% 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .sub_videos_container div[data-state='select']{
@@ -434,10 +445,10 @@ figure {
     height: 10rem;
     border: 1px solid #ffb142;
     cursor: pointer;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;    /* Opera < 11*/
+    overflow: hidden;    /* Opera < 11*/
     text-overflow:  ellipsis;
     background-color: rgba(255,177,66, 0.1);
+    -webkit-transition: background-color 0.2s ease-in;
     transition: background-color 0.2s ease-in;
     padding: 70px;
 }
@@ -470,18 +481,27 @@ figure {
 
 .direction{
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .direction p{
-    width: 20%;
     padding: 5px 20px 5px 20px;
-    font-size: 100%;
+    font-size: 150%;
     cursor: pointer;
     font-weight: 400;
-    border-top: 2px solid pink;
+    -webkit-transition: background-color 0.2s ease-in;
     transition: background-color 0.2s ease-in;
     background-color: transparent;
+}
+
+.direction p svg{
+    width: 90%;
+    -webkit-transition: fill 0.2s ease-in, border 0.2s ease-in;
+    transition: fill 0.2s ease-in, border 0.2s ease-in;
+    border: 2px solid transparent;
+    fill: grey;
 }
 
 .direction p:last-of-type{ 
@@ -489,7 +509,10 @@ figure {
     margin-left: 70%
 }
 
-.direction p:hover{ background-color: pink;}
+.direction p:hover svg{ 
+    fill: pink;
+    border: 2px solid pink
+}
 
 .description p{
     text-align: center;
@@ -535,7 +558,7 @@ figure {
     margin-left: 20px
 }
 
-#github svg, #instagram svg, #email svg{fill: black;transition: fill 0.2s ease-in}
+#github svg, #instagram svg, #email svg{fill: black;-webkit-transition: fill 0.2s ease-in;transition: fill 0.2s ease-in}
 
 #github svg:hover{fill: #b2bec3}
 
@@ -558,7 +581,6 @@ figure {
     }
 
     .viewBox div:last-child{ margin-left: 5px}
-
 }
 
 @media only screen and (max-width: 1300px){
@@ -571,6 +593,9 @@ figure {
 @media only screen and (max-width: 1159px){
     /*All Pages*/
     .main-nav{margin-right: 20px}
+
+    /*Homepage*/
+    .straightjuicing h1{ width: 50%}
 
     /*Words Page*/
     .wordBox { margin-left: 5%;}
@@ -594,10 +619,10 @@ figure {
 
 @media only screen and (max-width: 1009px){
     /*All Pages*/
-    .home h1{ font-size: 125%}
-
-    /*Homepage*/
-    .straightjuicing h1{ font-size: 190%}
+    .home h1{ 
+        font-size: 190%;
+        width: 40%
+    }
 
     .definition p{ font-size: 100%}
 
@@ -663,7 +688,12 @@ figure {
     /*Homepage*/
     .definition p{ font-size: 80%}
 
+    .straightjuicing h1{ width: 60%}
+
     h2{ font-size: 130%}
+
+    /*Words and Video Page*/
+    .home h1{ width: 45%}
 
     /*Words Page*/
     .smaller-screen-img img{ width: 250px;}
@@ -699,9 +729,6 @@ figure {
 }
 
 @media only screen and (max-width: 750px){
-    /*Homepage*/
-    .straightjuicing h1{ font-size: 150%}
-
     /*Words Page*/
     .mainHead h3{ font-size: 90%}
 
@@ -720,7 +747,7 @@ figure {
 
 @media only screen and (max-width: 700px){
     /*Words and Videos Page*/
-    .home h1{ font-size: 120%}
+    .home h1{ font-size: 180%}
 
     /*Words Page*/
     .drop_title h3{
@@ -738,8 +765,11 @@ figure {
 }
 
 @media only screen and (max-width: 684px){
+    /*Homepage*/
+    .straightjuicing h1{ font-size: 240%}
+
     /*Words and Videos Page*/
-    .home h1{ font-size: 100%}
+    .home h1{ width: 50%}
 }
 
 @media only screen and (max-width: 650px){
@@ -755,15 +785,15 @@ figure {
     .mainHead svg:hover{height: 65px;}
 }
 
-@media only screen and (max-width:604px){
+@media only screen and (max-width:623px){
     /*Videos and Words Page*/
-    .home h1{ font-size: 90%}
+    .home h1{ 
+        font-size: 180%;
+        width: 55%
+    }
 }
 
 @media only screen and (max-width: 600px){
-    /*Homepage*/
-    .straightjuicing h1{ width: 50%}
-
     /*Words Page*/
     .smaller-screen-img img:last-of-type{ display: none}
 
@@ -785,20 +815,31 @@ figure {
 
     .sub_videos {
         margin: 20px 10% 20px 10%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 }
 
 @media only screen and (max-width: 591px){
+    /*Homepage*/
+    .straightjuicing h1{ width: 70% }
+
+    /*Videos Page*/
     .sub_videos {
         margin: 20px 8% 20px 8%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 }
 
 @media only screen and (max-width:564px){
     /*Videos and Words Page*/
-    .home h1{ font-size: 80%}
+    .home h1{ 
+        font-size: 170%;
+        width: 55%
+    }
 }
 
 @media only screen and (max-width:550px){
@@ -813,24 +854,35 @@ figure {
     /*Videos Page*/
     .sub_videos {
         margin: 20px 5% 20px 5%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 }
 
 @media only screen and (max-width: 525px){
     /*Videos and Words Page*/
-    .home h1{ width:36%;}
+    .home h1{ font-size: 160%;}
 }
 
 @media only screen and (max-width: 506px){
     /*Videos Page*/
     .sub_videos {
         margin: 20px 0 20px 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 }
 
 @media only screen and (max-width: 500px){
+    /*Homepage*/
+    .straightjuicing h1{ 
+        width: 70%;
+        font-size: 230%
+    }
+
+
     /*Words Page*/
     .wordBox { margin-left: 15%;}
 
