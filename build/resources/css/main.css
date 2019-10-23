@@ -284,10 +284,7 @@ a{
     margin-top: 50px
 }
 
-.viewBox{ 
-    margin-left: 10%;
-    cursor: default
-}
+.viewBox{ cursor: default}
 
 /*-exit buttons-*/
 
@@ -662,8 +659,6 @@ figure, .sub_videos_container{
         float: left;
         margin: 40px 0px 20px 40px;
     }
-
-    .smaller-screen-img{margin: 0 12.5%}
 }
 
 @media only screen and (max-width:948px){
@@ -675,7 +670,6 @@ figure, .sub_videos_container{
 
 @media only screen and (max-width: 896px){
     /*Words Page*/
-    .smaller-screen-img{margin: 0 6.5%}
 
     .mainHead h3 { font-size: 118%}
 
@@ -698,8 +692,6 @@ figure, .sub_videos_container{
     /*Words Page*/
     .smaller-screen-img img{ width: 250px;}
 
-    .smaller-screen-img{margin: 0 10%}
-
     .mainHead h3 { font-size: 110%}
 
     .drop_title h3{ 
@@ -718,8 +710,6 @@ figure, .sub_videos_container{
         width: 200px;
         height: 110px;
     }
-
-    .smaller-screen-img{margin: 0 10%}
 
     .mainHead h3{ font-size: 100%}
 
@@ -773,7 +763,6 @@ figure, .sub_videos_container{
 }
 
 @media only screen and (max-width: 650px){
-    .smaller-screen-img{margin: 0 5%}
 
     .mainHead h3{
         font-size: 90%;
@@ -806,18 +795,16 @@ figure, .sub_videos_container{
         height: 160px;
     }
 
-    .smaller-screen-img{ margin: 0 8%}
-
     .wordBox{ margin-left: 20%}
 
     .wordBox .loader svg{ margin-right: 27.5%}
-    
+    /*Videos Page*/
     .drop_title h3{ 
         font-size: 75%;
         padding-top: 12.5px
     }
 
-    /*Videos Page*/
+    .smaller-screen-img{ margin: 0}
 
     .sub_videos {
         margin: 20px 10% 20px 10%;
@@ -829,7 +816,10 @@ figure, .sub_videos_container{
 
 @media only screen and (max-width: 591px){
     /*Homepage*/
-    .straightjuicing h1{ width: 70% }
+    .straightjuicing h1{ 
+        width: 75%;
+        font-size: 230%
+     }
 
     /*Videos Page*/
     .sub_videos {
