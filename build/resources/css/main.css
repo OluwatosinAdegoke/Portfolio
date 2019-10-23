@@ -417,15 +417,18 @@ figure h3{
 }
 
 figure {
-    margin: 0 0 2% 0;
     padding: 0;
     border-bottom: 2px solid  #ffb142;
 }
 
+figure, .sub_videos_container{
+    margin-left: 5%;
+    margin-right: 5%
+}
 
 .sub_videos{
-    margin: 20px 0px 20px 0;
-    align-items: center
+    margin: 20px 0px 30% 0;
+    align-items: center;
 }
 
 .sub_videos_container div[data-state='select']{
@@ -474,14 +477,19 @@ figure {
 }
 
 .direction p{
-    width: 20%;
     padding: 5px 20px 5px 20px;
-    font-size: 100%;
+    font-size: 150%;
     cursor: pointer;
     font-weight: 400;
-    border-top: 2px solid pink;
     transition: background-color 0.2s ease-in;
     background-color: transparent;
+}
+
+.direction p svg{
+    width: 50%;
+    transition: fill 0.2s ease-in, border 0.2s ease-in;
+    border: 2px solid transparent;
+    fill: grey;
 }
 
 .direction p:last-of-type{ 
@@ -489,7 +497,10 @@ figure {
     margin-left: 70%
 }
 
-.direction p:hover{ background-color: pink;}
+.direction p:hover svg{ 
+    fill: pink;
+    border: 2px solid pink
+}
 
 .description p{
     text-align: center;
@@ -558,7 +569,6 @@ figure {
     }
 
     .viewBox div:last-child{ margin-left: 5px}
-
 }
 
 @media only screen and (max-width: 1300px){
@@ -571,6 +581,9 @@ figure {
 @media only screen and (max-width: 1159px){
     /*All Pages*/
     .main-nav{margin-right: 20px}
+
+    /*Homepage*/
+    .straightjuicing h1{ width: 50%}
 
     /*Words Page*/
     .wordBox { margin-left: 5%;}
@@ -594,10 +607,10 @@ figure {
 
 @media only screen and (max-width: 1009px){
     /*All Pages*/
-    .home h1{ font-size: 125%}
-
-    /*Homepage*/
-    .straightjuicing h1{ font-size: 190%}
+    .home h1{ 
+        font-size: 190%;
+        width: 40%
+    }
 
     .definition p{ font-size: 100%}
 
@@ -663,7 +676,12 @@ figure {
     /*Homepage*/
     .definition p{ font-size: 80%}
 
+    .straightjuicing h1{ width: 60%}
+
     h2{ font-size: 130%}
+
+    /*Words and Video Page*/
+    .home h1{ width: 45%}
 
     /*Words Page*/
     .smaller-screen-img img{ width: 250px;}
@@ -699,9 +717,6 @@ figure {
 }
 
 @media only screen and (max-width: 750px){
-    /*Homepage*/
-    .straightjuicing h1{ font-size: 150%}
-
     /*Words Page*/
     .mainHead h3{ font-size: 90%}
 
@@ -720,7 +735,7 @@ figure {
 
 @media only screen and (max-width: 700px){
     /*Words and Videos Page*/
-    .home h1{ font-size: 120%}
+    .home h1{ font-size: 180%}
 
     /*Words Page*/
     .drop_title h3{
@@ -738,8 +753,11 @@ figure {
 }
 
 @media only screen and (max-width: 684px){
+    /*Homepage*/
+    .straightjuicing h1{ font-size: 240%}
+
     /*Words and Videos Page*/
-    .home h1{ font-size: 100%}
+    .home h1{ width: 50%}
 }
 
 @media only screen and (max-width: 650px){
@@ -755,15 +773,15 @@ figure {
     .mainHead svg:hover{height: 65px;}
 }
 
-@media only screen and (max-width:604px){
+@media only screen and (max-width:623px){
     /*Videos and Words Page*/
-    .home h1{ font-size: 90%}
+    .home h1{ 
+        font-size: 180%;
+        width: 55%
+    }
 }
 
 @media only screen and (max-width: 600px){
-    /*Homepage*/
-    .straightjuicing h1{ width: 50%}
-
     /*Words Page*/
     .smaller-screen-img img:last-of-type{ display: none}
 
@@ -790,6 +808,10 @@ figure {
 }
 
 @media only screen and (max-width: 591px){
+    /*Homepage*/
+    .straightjuicing h1{ width: 70% }
+
+    /*Videos Page*/
     .sub_videos {
         margin: 20px 8% 20px 8%;
         align-items: center;
@@ -798,7 +820,10 @@ figure {
 
 @media only screen and (max-width:564px){
     /*Videos and Words Page*/
-    .home h1{ font-size: 80%}
+    .home h1{ 
+        font-size: 170%;
+        width: 55%
+    }
 }
 
 @media only screen and (max-width:550px){
@@ -819,7 +844,7 @@ figure {
 
 @media only screen and (max-width: 525px){
     /*Videos and Words Page*/
-    .home h1{ width:36%;}
+    .home h1{ font-size: 160%;}
 }
 
 @media only screen and (max-width: 506px){
@@ -831,6 +856,13 @@ figure {
 }
 
 @media only screen and (max-width: 500px){
+    /*Homepage*/
+    .straightjuicing h1{ 
+        width: 70%;
+        font-size: 230%
+    }
+
+
     /*Words Page*/
     .wordBox { margin-left: 15%;}
 
