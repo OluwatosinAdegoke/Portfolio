@@ -436,6 +436,8 @@ figure, .sub_videos_container{
     align-items: center;
 }
 
+.sub_videos_container div[data-state='select']:first-of-type{ margin-left: 0px !important;}
+
 .sub_videos_container div[data-state='select']{
     width: 10rem;
     margin: 0px 0px 30px 20px;
@@ -759,13 +761,27 @@ figure, .sub_videos_container{
 
     /*Words and Videos Page*/
     .home h1{ width: 50%}
+
+    /*Videos Page*/
+    .sub_videos { margin: 20px 0;}
+}
+
+@media only screen and (max-width: 660px){
+    /*Videos Page*/
+    .sub_videos_container div[data-state='select']{
+        width: 9rem;
+        height: 9rem;
+        padding: 65px;
+    }
+
+    .sub_videos_container div h5{ font-size: 140%}
 }
 
 @media only screen and (max-width: 650px){
-
+    /*Words Page*/
     .mainHead h3{
         font-size: 90%;
-        width: 75%;
+        width: 60%;
     }
 
     .mainHead svg{ height: 40px}
@@ -779,6 +795,15 @@ figure, .sub_videos_container{
         font-size: 150%;
         width: 60%
     }
+
+    /*Videos Page*/
+    .sub_videos_container div[data-state='select']{
+        width: 8rem;
+        height: 8rem;
+        padding: 50px;
+    }
+
+    .sub_videos_container div h5{ font-size: 130%}
 }
 
 @media only screen and (max-width: 600px){
@@ -805,13 +830,6 @@ figure, .sub_videos_container{
         font-size: 75%;
         padding-top: 12.5px
     }
-
-    .sub_videos {
-        margin: 20px 10% 20px 10%;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
 }
 
 @media only screen and (max-width: 591px){
@@ -820,14 +838,6 @@ figure, .sub_videos_container{
         width: 75%;
         font-size: 200%
      }
-
-    /*Videos Page*/
-    .sub_videos {
-        margin: 20px 8% 20px 8%;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
 }
 
 @media only screen and (max-width:550px){
@@ -843,29 +853,11 @@ figure, .sub_videos_container{
         font-size: 65%;
         padding-top: 12.5px
     }
-
-    /*Videos Page*/
-    .sub_videos {
-        margin: 20px 5% 20px 5%;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
 }
 
 @media only screen and (max-width: 525px){
     /*Videos and Words Page*/
     .home h1{ font-size: 130%;}
-}
-
-@media only screen and (max-width: 506px){
-    /*Videos Page*/
-    .sub_videos {
-        margin: 20px 0 20px 0;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
 }
 
 @media only screen and (max-width: 500px){
