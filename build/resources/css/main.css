@@ -305,7 +305,7 @@ a{
 /*-the words-*/
 .wordViewBox{
     width: 100%;
-    padding: 50px
+    padding: 5%
 }
 
 .list_words li{
@@ -636,7 +636,6 @@ figure, .sub_videos_container{
         width: 100%;
         text-align: center;
         display: block;
-        margin: 10px;
     }
 
     .smaller-screen-img img{
@@ -798,13 +797,14 @@ figure, .sub_videos_container{
     .wordBox{ margin-left: 20%}
 
     .wordBox .loader svg{ margin-right: 27.5%}
+
+    .smaller-screen-img{ margin: 0}
+
     /*Videos Page*/
     .drop_title h3{ 
         font-size: 75%;
         padding-top: 12.5px
     }
-
-    .smaller-screen-img{ margin: 0}
 
     .sub_videos {
         margin: 20px 10% 20px 10%;
@@ -818,7 +818,7 @@ figure, .sub_videos_container{
     /*Homepage*/
     .straightjuicing h1{ 
         width: 75%;
-        font-size: 230%
+        font-size: 210%
      }
 
     /*Videos Page*/
