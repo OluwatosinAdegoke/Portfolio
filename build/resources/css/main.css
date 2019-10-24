@@ -78,7 +78,6 @@ ul { list-style: none}
     top: 25%
 }
 .loader {
-    margin: 0 auto;
     width: 100%;
     text-align: center
 }
@@ -103,7 +102,6 @@ section{ margin-top: 0px}
     background-position: center;
     width: 100%;
 }
-
 
 h1{ 
     height: auto;
@@ -205,11 +203,8 @@ a{
 }
 
 /*---------------*/
-/* WORDS         */
+/* All Pages      */
 /*---------------*/
-
-.words-background{ background-color: #f7f1e3}
-.view-background{ background-color: #fffefd}
 
 .home h1{
     width:32%;
@@ -227,6 +222,18 @@ a{
 .home h1 span{
     -webkit-text-stroke: 1px #ffb142;
     color: #dfe4ea
+}
+
+/*---------------*/
+/* WORDS         */
+/*---------------*/
+
+.words-background{ background-color: #f7f1e3}
+.view-background{ background-color: #fffefd}
+
+.words-container{
+    width: 100%;
+    text-align: center
 }
 
 /*-----viewboxes------*/
@@ -273,9 +280,8 @@ a{
 }
 
 /*ViewBox Positioning*/
-.wordBox { margin-left: 12.5%;}
 
-.wordBox .loader svg{ margin-right: 12.5%}
+.wordBox .loader svg{ margin-right: 12.5%}*/
 
 /*---display view box---*/
 
@@ -583,10 +589,10 @@ figure, .sub_videos_container{
 }
 
 @media only screen and (max-width: 1300px){
-    /*Words Page*/
+    /*Words Page
     .wordBox { margin-left: 10%;}
 
-    .wordBox .loader svg{ margin-right: 12.5%}
+    .wordBox .loader svg{ margin-right: 12.5%}*/
 }
 
 @media only screen and (max-width: 1159px){
@@ -597,24 +603,24 @@ figure, .sub_videos_container{
     .straightjuicing h1{ width: 50%}
     h1 { font-size: 260% }
 
-    /*Words Page*/
+    /*Words Page
     .wordBox { margin-left: 5%;}
 
-    .wordBox .loader svg{ margin-right: 5%}
+    .wordBox .loader svg{ margin-right: 5%}*/
 }
 
 @media only screen and (max-width: 1100px){
-    /*Words Page*/
+    /*Words Page
     .wordBox { margin-left: 0%;}
 
-    .wordBox .loader svg{ margin-right: 0%}
+    .wordBox .loader svg{ margin-right: 0%}*/
 }
 
 @media only screen and (max-width: 1036px){
-    /*Words Page*/
+    /*Words Page
     .wordBox { margin-left: 17.5%;}
 
-    .wordBox .loader svg{ margin-right: 20%}
+    .wordBox .loader svg{ margin-right: 20%}*/
 }
 
 @media only screen and (max-width: 1009px){
@@ -658,16 +664,15 @@ figure, .sub_videos_container{
     .smaller-screen-img img{
         width: 300px;
         height: 160px;
-        float: left;
         margin: 40px 0px 20px 40px;
     }
 }
 
 @media only screen and (max-width:948px){
-    /*Words Page*/
+    /*Words Page
     .wordBox { margin-left: 13%;}
 
-    .wordBox .loader svg{ margin-right: 18%}
+    .wordBox .loader svg{ margin-right: 18%}*/
 }
 
 @media only screen and (max-width: 896px){
@@ -675,9 +680,9 @@ figure, .sub_videos_container{
 
     .mainHead h3 { font-size: 118%}
 
-    .wordBox { margin-left: 10%;}
+    /*.wordBox { margin-left: 10%;}
 
-    .wordBox .loader svg{ margin-right: 15%}
+    .wordBox .loader svg{ margin-right: 15%}*/
 }
 
 @media only screen and (max-width: 850px){
@@ -701,9 +706,9 @@ figure, .sub_videos_container{
         padding-top: 5px
     }
 
-    .wordBox { margin-left: 8%;}
+   /* .wordBox { margin-left: 8%;}
 
-    .wordBox .loader svg{ margin-right: 8%}
+    .wordBox .loader svg{ margin-right: 8%}*/
 }
 
 @media only screen and (max-width: 775px){
@@ -715,9 +720,9 @@ figure, .sub_videos_container{
 
     .mainHead h3{ font-size: 100%}
 
-    .wordBox { margin-left: 4%;}
+    /*.wordBox { margin-left: 4%;}
 
-    .wordBox .loader svg{ margin-right: 4%}
+    .wordBox .loader svg{ margin-right: 4%}*/
 }
 
 @media only screen and (max-width: 750px){
@@ -731,10 +736,10 @@ figure, .sub_videos_container{
 }
 
 @media only screen and (max-width: 725px){
-    /*Words Page*/
+    /*Words Page
     .wordBox { margin-left: 25%;}
 
-    .wordBox .loader svg{ margin-right: 32.5%}
+    .wordBox .loader svg{ margin-right: 32.5%}*/
 }
 
 @media only screen and (max-width: 700px){
@@ -750,9 +755,9 @@ figure, .sub_videos_container{
 
 @media only screen and (max-width: 695px){
     /*Words Page*/
-    .wordBox{ margin-left: 25%}
+    /*.wordBox{ margin-left: 25%}
 
-    .wordBox .loader svg{ margin-right: 32.5%}
+    .wordBox .loader svg{ margin-right: 32.5%}*/
 
 }
 
@@ -798,9 +803,9 @@ figure, .sub_videos_container{
 
     /*Videos Page*/
     .sub_videos_container div[data-state='select']{
-        width: 8rem;
-        height: 8rem;
-        padding: 50px;
+        width: 7rem;
+        height: 7rem;
+        padding: 40px;
     }
 
     .sub_videos_container div h5{ font-size: 130%}
@@ -819,9 +824,9 @@ figure, .sub_videos_container{
         height: 160px;
     }
 
-    .wordBox{ margin-left: 20%}
+    /*.wordBox{ margin-left: 20%}
 
-    .wordBox .loader svg{ margin-right: 27.5%}
+    .wordBox .loader svg{ margin-right: 27.5%}*/
 
     .smaller-screen-img{ margin: 0}
 
@@ -880,9 +885,9 @@ figure, .sub_videos_container{
     /*Videos Page*/
     figure p{ font-size: 60%}
 
-    /*Words Page*/
+    /*Words Page
     .wordBox { margin-left: 10%;}
 
-    .wordBox .loader svg{ margin-right: 12.5%}
+    .wordBox .loader svg{ margin-right: 12.5%}*/
 
 }

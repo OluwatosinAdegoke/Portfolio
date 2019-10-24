@@ -9,7 +9,7 @@ window.$ = $;
 
 // thumbnail view
 export const toView = content => {
-    const markUp = `<div class='col span-1-of-4 box animated fadeIn' id='individualWordBox_js' name='${content.title}'>
+    const markUp = `<div class='box animated fadeIn' id='individualWordBox_js' name='${content.title}'>
                         <ul>
                             <li class='title'>${content.title}</li>
                             <li class='thumbnail'>

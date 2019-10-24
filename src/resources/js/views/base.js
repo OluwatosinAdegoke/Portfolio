@@ -15,7 +15,7 @@ export const elements = {
     juicing: window.document.querySelector('.straightjuicing'),
     landing: window.document.querySelector('.landing'),
     wordsBox: window.document.getElementById(`wordBox_js`),
-    stripped_wordsBox: 'wordBox_js',
+    stripped_wordsBox: 'loader_js',
     buttons: window.document.querySelectorAll('.inactive'),
     ghost_buttons: window.document.querySelector('.ghost'),
     page: window.document.querySelector('html'),
