@@ -3,7 +3,6 @@
 /*---------------*/
 @import '../../vendors/css/animate.css';
 @import '../../vendors/css/Grid.css';
-@import '../../../node_modules/normalize.css/normalize.css';
 
 * {
     margin: 0;
@@ -121,7 +120,7 @@ h1{
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     position: fixed;
-    bottom: 20%;
+    bottom: 15%;
     color: #ffb142;
 }
 
@@ -136,12 +135,12 @@ h1{
     border-bottom: 2px black solid;
     background: rgba(96,95,95, 0.9);
     height: auto;
-    padding: 5% 2.5%;
+    padding: 5%;
     margin-top:50px;
 }
 
 .definition p{ 
-    width: 70%;
+    width: 95%;
     font-size: 120%;
     color: white;
  }
@@ -596,6 +595,7 @@ figure, .sub_videos_container{
 
     /*Homepage*/
     .straightjuicing h1{ width: 50%}
+    h1 { font-size: 260% }
 
     /*Words Page*/
     .wordBox { margin-left: 5%;}
