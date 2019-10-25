@@ -96,10 +96,10 @@ section{ margin-top: 0px}
 /*---------------*/
 
 .landing {
-    background-image:  url('img/juicing_b&w-min.png');
-    background-size: cover;
+    background:url('img/juicing_b&w-min.png');
+    background-size: 100%;
     height: 100vh;
-    background-position: center;
+    background-position: 50% 0;
     width: 100%;
 }
 
@@ -231,16 +231,17 @@ a{
 .words-background{ background-color: #f7f1e3}
 .view-background{ background-color: #fffefd}
 
-.words-container{
-    width: 100%;
-    text-align: center
-}
+/*-----ViewBox Positioning-----*/
+.wordBox{ margin: 0 6%}
+
+.words-container{ margin: 0 auto}
 
 /*-----viewboxes------*/
 
 .box{
     height: 400px;
-    width: 300px;
+    min-width: 300px;
+    width: 23.8%;
     overflow: hidden;    /* Opera < 11*/
     text-overflow: ellipsis;
     margin: 20px;
@@ -249,7 +250,8 @@ a{
     -webkit-transition: background-color 0.2s ease-in;
     transition: background-color 0.2s ease-in;
     border: 1px solid #ffb142;
-    background-color: transparent
+    background-color: transparent;
+    float: left
 }
 
 .thumbnail img{
@@ -278,10 +280,6 @@ a{
 .box:hover, .box:active{ 
     background-color: rgba(255,177,66, 0.3)
 }
-
-/*ViewBox Positioning*/
-
-.wordBox .loader svg{ margin-right: 12.5%}*/
 
 /*---display view box---*/
 

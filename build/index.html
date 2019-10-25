@@ -39,4 +39,15 @@
     
     <script src='bundle.js'></script>
     <script src='../node_modules/respond.js/src/respond.js'></script>
+    <script src='../node_modules/jquery/dist/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js'>
+        $('document').ready(function(){
+            //Add ripple FX to background image
+            $('.landing').ripples({
+                resolution:512,
+                dropRadius: 23,
+                perturbance: 0.04
+            })
+        })
+    </script>
 </html>
