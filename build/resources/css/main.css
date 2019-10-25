@@ -232,9 +232,8 @@ a{
 .view-background{ background-color: #fffefd}
 
 /*-----ViewBox Positioning-----*/
-.wordBox{ margin: 0 6%}
+.wordBox{ margin: 0 10%}
 
-.words-container{ margin: 0 auto}
 
 /*-----viewboxes------*/
 
@@ -244,7 +243,7 @@ a{
     width: 23.8%;
     overflow: hidden;    /* Opera < 11*/
     text-overflow: ellipsis;
-    margin: 20px;
+    margin: 20px 0 0 20px ;
     cursor: pointer;
     padding: 20px;
     -webkit-transition: background-color 0.2s ease-in;
