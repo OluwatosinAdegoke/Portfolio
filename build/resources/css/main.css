@@ -96,9 +96,9 @@ section{ margin-top: 0px}
 /*---------------*/
 
 .landing {
-    background:url('img/juicing_b&w-min.png');
-    -webkit-background: url('img/juicing_b&w-min.png');
-    -o-background: url('img/juicing_b&w-min.png');
+    background-image:url('img/juicing_b&w-min.png');
+    -webkit-background-image: url('img/juicing_b&w-min.png');
+    -o-background=image: url('img/juicing_b&w-min.png');
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
