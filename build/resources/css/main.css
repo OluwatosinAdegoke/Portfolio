@@ -115,7 +115,7 @@ h1{
     letter-spacing: 0px;
 }
 
-.straightjuicing{cursor: pointer;}
+.straightjuicing{ cursor: pointer;}
 
 .straightjuicing h1{ 
     width: 40%;
@@ -882,7 +882,7 @@ figure, .sub_videos_container{
     /*Homepage*/
     .straightjuicing h1{ 
         width: 75%;
-        font-size: 170%
+        font-size: 160%
     }
 
     /*Videos Page*/
