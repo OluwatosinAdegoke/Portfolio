@@ -100,13 +100,13 @@ section{ margin-top: 0px}
     -webkit-background: url('img/juicing_b&w-min.jpg');
     -ms-background: url('img/juicing_b&w-min.jpg');
     -moz-background: url('img/juicing_b&w-min.jpg');
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
+    -moz-background-size: 100%;
+    -ms-background-size: 100%;
+    -webkit-background-size: 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     height: 100vh;
-    background-position: 50% 0;
+    background-position: cover;
     width: 100%;
 }
 
