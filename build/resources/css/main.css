@@ -103,8 +103,9 @@ section{ margin-top: 0px}
     -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
-    background-position: cover;
+    background-position: 50% 0;
     width: 100%;
 }
 
