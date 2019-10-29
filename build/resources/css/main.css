@@ -234,7 +234,7 @@ a{
 .view-background{ background-color: #fffefd}
 
 /*-----ViewBox Positioning-----*/
-.wordBox{ margin: 0 10%}
+.wordBox{ margin: 0 0 0 10%}
 
 
 /*-----viewboxes------*/
@@ -822,8 +822,6 @@ figure, .sub_videos_container{
         width: 300px;
         height: 160px;
     }
-
-    .wordBox{ margin: 0}
 
     /*.wordBox{ margin-left: 20%}
 
