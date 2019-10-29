@@ -103,6 +103,7 @@ section{ margin-top: 0px}
     overflow: hidden;
     background-position: center center;
     width: 100%;
+    background-attachment: scroll;
 }
 
 h1{ 
@@ -711,6 +712,9 @@ figure, .sub_videos_container{
 }
 
 @media only screen and (max-width: 775px){
+    /*Homepage*/
+    .landing{ background-attachment: initial;}
+
     /*Words Page*/
     .smaller-screen-img img{
         width: 200px;
