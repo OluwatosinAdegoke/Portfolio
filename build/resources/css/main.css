@@ -99,6 +99,7 @@ section{ margin-top: 0px}
     background: url('img/juicing_b&w-min.jpg');
     background-size: cover;
     height: 100vh;
+    background-repeat: no-repeat;
     overflow: hidden;
     background-position: center center;
     width: 100%;
@@ -796,7 +797,7 @@ figure, .sub_videos_container{
 @media only screen and (max-width:638px){
     /*Videos and Words Page*/
     .home h1{ 
-        font-size: 90%;
+        font-size: 80%;
     }
 
     /*Videos Page*/
@@ -821,6 +822,8 @@ figure, .sub_videos_container{
         width: 300px;
         height: 160px;
     }
+
+    .wordBox{ margin: 0}
 
     /*.wordBox{ margin-left: 20%}
 
@@ -861,7 +864,7 @@ figure, .sub_videos_container{
 @media only screen and (max-width: 525px){
     /*Videos and Words Page*/
     .home h1{ 
-        font-size: 80%;
+        font-size: 70%;
         margin-top: 20px
     }
 
@@ -882,10 +885,4 @@ figure, .sub_videos_container{
 
     /*Videos Page*/
     figure p{ font-size: 60%}
-
-    /*Words Page
-    .wordBox { margin-left: 10%;}
-
-    .wordBox .loader svg{ margin-right: 12.5%}*/
-
 }
