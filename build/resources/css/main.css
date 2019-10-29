@@ -97,14 +97,7 @@ section{ margin-top: 0px}
 
 .landing {
     background: url('img/juicing_b&w-min.jpg');
-    -webkit-background: url('img/juicing_b&w-min.jpg');
-    -ms-background: url('img/juicing_b&w-min.jpg');
-    -moz-background: url('img/juicing_b&w-min.jpg');
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -webkit-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
     height: 100vh;
     overflow: hidden;
     background-position: center center;
@@ -803,7 +796,7 @@ figure, .sub_videos_container{
 @media only screen and (max-width:638px){
     /*Videos and Words Page*/
     .home h1{ 
-        font-size: 110%;
+        font-size: 90%;
     }
 
     /*Videos Page*/
