@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang='en' style='background-color:black;'>
+<html lang='en' style='background-color:#fffefd'>
 
     <head>
-        <meta charset='UTF-8'>
-        <meta name ='viewport' content='width=device-width; initial-scale=1.0;' >
+        <meta charset='utf-8'>
+        <meta name ='viewport' content='width=device-width, initial-scale=1.0' >
         <meta name='description' content='StraightJuicing is the sole desire to express with no end. It is creativity with no bounds'>
         <title>Straight Juicing</title>
         <link href="https://fonts.googleapis.com/css?family=Rambla:700,700i|Titillium+Web:200,300,400" rel="stylesheet">
@@ -38,18 +38,17 @@
     <script type="text/javascript" src="bundle.js"></script></body>
     
     <script src='bundle.js'></script>
-    <script src='../node_modules/respond.js/src/respond.js'></script>
-    <script src='../node_modules/jquery/dist/jquery.js'></script>
-    <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js'>
-        $('document').ready(function(){
-            if ($(window).width() <= 800){
-                //Add ripple FX to background image
-                $('.landing').ripples({
-                    resolution:512,
-                    dropRadius: 23,
-                    perturbance: 0.04
-                })
-	        }
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.js'></script>
+    <script type='text/javascript'>
+        $(document).ready(function(){
+            //Add ripple FX to background image
+            $('header').ripples({
+                resolution: 256,
+                dropRadius: 10,
+                perturbance: 0.04,
+            })
         })
-    </script>-->
+    </script>
 </html>
