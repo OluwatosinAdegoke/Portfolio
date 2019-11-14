@@ -14,6 +14,7 @@
     "animate.css": "^3.7.2",
     "html5shiv": "^3.7.3",
     "jquery": "^3.4.1",
+    "node": "^13.1.0",
     "normalize.css": "^8.0.1",
     "respond.js": "^1.4.2",
     "waypoints": "^4.0.1"
